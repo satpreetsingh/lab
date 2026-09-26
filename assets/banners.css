@@ -1,0 +1,21 @@
+/* Lab banners: responsive sizing.
+   On wide screens a banner shows in full. On narrow screens (phones) the banner
+   keeps a minimum height and crops at the sides, so it does not become too thin.
+   Set --focus on one banner to choose which part stays in view when it crops. */
+.lab-banner,
+.lab-divider {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: var(--focus, 50%) 50%;
+}
+.lab-banner  { min-height: 150px; }
+.lab-divider { min-height: 56px; }
+
+/* Optional: a little more height on small tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+  .lab-banner  { min-height: 170px; }
+  .lab-divider { min-height: 64px; }
+}

@@ -26,7 +26,7 @@ body {
     sans-serif;
   color: var(--text);
   background: var(--background);
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 a {
@@ -43,7 +43,7 @@ header {
 }
 
 nav {
-  min-height: 72px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -78,14 +78,16 @@ nav ul a:hover {
 }
 
 .hero {
-  padding: 100px 0 80px;
+  padding: 36px 0 12px;
+  /* the header already draws a bottom border; skip the section rule's top one */
+  border-top: none;
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 7vw, 5.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-  margin: 0 0 28px;
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin: 0 0 12px;
   max-width: 800px;
 }
 
@@ -97,29 +99,55 @@ nav ul a:hover {
 }
 
 .affiliation {
-  margin-top: 24px;
+  margin-top: 12px;
   font-size: 1rem !important;
 }
 
+.hero .intro {
+  margin-top: 14px;
+}
+
+.hero .intro p {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.hero .news {
+  font-size: 1rem;
+  margin: 0 0 16px;
+}
+
+.hero .news a {
+  color: var(--accent);
+}
+
 section {
-  padding: 70px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--border);
+}
+
+/* the hero banner ends in its own horizontal rule, so the section border
+   below it would read as a duplicate */
+#research {
+  border-top: none;
+  padding-top: 12px;
 }
 
 h2 {
   font-size: 1.8rem;
   letter-spacing: -0.03em;
-  margin: 0 0 28px;
+  margin: 0 0 16px;
 }
 
 .research-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
+  gap: 24px;
 }
 
 .research-item h3 {
-  margin: 0 0 10px;
+  margin: 0 0 6px;
   font-size: 1.1rem;
 }
 
@@ -128,13 +156,17 @@ h2 {
   color: var(--muted);
 }
 
+.research-more {
+  margin: 20px 0 0;
+}
+
 .about-text {
   max-width: 760px;
   font-size: 1.08rem;
 }
 
 .about-text p {
-  margin-top: 0;
+  margin: 0 0 12px;
 }
 
 .links {
@@ -145,7 +177,7 @@ h2 {
 
 .button {
   display: inline-block;
-  padding: 10px 16px;
+  padding: 8px 14px;
   border: 1px solid var(--border);
   border-radius: 8px;
   text-decoration: none;
@@ -155,18 +187,26 @@ h2 {
   border-color: var(--accent);
 }
 
+.hero-banner {
+  margin-top: 20px;
+}
+
+.section-divider {
+  /* hug the section this closes, so it doesn't read as the next one's banner */
+  margin-top: 16px;
+}
+
 footer {
   border-top: 1px solid var(--border);
-  padding: 36px 0;
+  padding: 20px 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
 @media (max-width: 700px) {
   nav {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px 0;
+    min-height: 48px;
+    gap: 16px;
   }
 
   nav ul {
@@ -175,7 +215,15 @@ footer {
   }
 
   .hero {
-    padding: 70px 0 60px;
+    padding: 28px 0 8px;
+  }
+
+  .hero-banner {
+    margin-top: 24px;
+  }
+
+  .section-divider {
+    margin-top: 12px;
   }
 
   .research-grid {
