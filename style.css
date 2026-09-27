@@ -4,6 +4,9 @@
   --border: #e5e7eb;
   --background: #ffffff;
   --accent: #4b9cd3;
+  --link: #2c6fa6;
+  --amber: #de9a2e;
+  --tint: #f5f9fc;
   --max-width: 920px;
 }
 
@@ -26,11 +29,17 @@ body {
     sans-serif;
   color: var(--text);
   background: var(--background);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 a {
-  color: inherit;
+  color: var(--link);
+  text-decoration-color: rgba(75, 156, 211, 0.45);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
 }
 
 .container {
@@ -39,6 +48,7 @@ a {
 }
 
 header {
+  border-top: 3px solid var(--accent);
   border-bottom: 1px solid var(--border);
 }
 
@@ -51,6 +61,7 @@ nav {
 }
 
 .site-name {
+  color: var(--text);
   font-weight: 700;
   font-size: 1.15rem;
   text-decoration: none;
@@ -78,7 +89,7 @@ nav ul a:hover {
 }
 
 .hero {
-  padding: 36px 0 12px;
+  padding: 28px 0 10px;
   /* the header already draws a bottom border; skip the section rule's top one */
   border-top: none;
 }
@@ -104,7 +115,7 @@ nav ul a:hover {
 }
 
 .hero .intro {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .hero .intro p {
@@ -115,15 +126,15 @@ nav ul a:hover {
 
 .hero .news {
   font-size: 1rem;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 
 .hero .news a {
-  color: var(--accent);
+  color: var(--link);
 }
 
 section {
-  padding: 28px 0;
+  padding: 18px 0;
   border-top: 1px solid var(--border);
 }
 
@@ -131,19 +142,37 @@ section {
    below it would read as a duplicate */
 #research {
   border-top: none;
-  padding-top: 12px;
+  background: var(--tint);
+}
+
+#collaborators {
+  background: var(--tint);
+}
+
+.hero .news strong {
+  color: #b06f12;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: -0.03em;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-top: 6px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent) 60%, var(--amber) 60%);
 }
 
 .research-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .research-item h3 {
@@ -166,11 +195,11 @@ h2 {
 }
 
 .research-papers li + li {
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .research-more {
-  margin: 20px 0 0;
+  margin: 12px 0 0;
 }
 
 .about-text {
@@ -179,7 +208,7 @@ h2 {
 }
 
 .about-text p {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .links {
@@ -189,6 +218,7 @@ h2 {
 }
 
 .button {
+  color: var(--text);
   display: inline-block;
   padding: 8px 14px;
   border: 1px solid var(--border);
@@ -198,20 +228,26 @@ h2 {
 
 .button:hover {
   border-color: var(--accent);
+  background: var(--tint);
 }
 
 .hero-banner {
-  margin-top: 20px;
+  margin-top: 16px;
+}
+
+/* the cropped banner is wide and short; let phones crop less of it */
+.lab-banner.hero-banner {
+  min-height: 90px;
 }
 
 .section-divider {
   /* hug the section this closes, so it doesn't read as the next one's banner */
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 footer {
   border-top: 1px solid var(--border);
-  padding: 20px 0;
+  padding: 14px 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -228,11 +264,11 @@ footer {
   }
 
   .hero {
-    padding: 28px 0 8px;
+    padding: 20px 0 12px;
   }
 
   .hero-banner {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
   .section-divider {
