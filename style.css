@@ -253,17 +253,6 @@ h2::after {
   white-space: nowrap;
 }
 
-.news-older {
-  max-width: 760px;
-  margin-top: 8px;
-}
-
-.news-older summary {
-  cursor: pointer;
-  color: var(--link);
-  padding: 6px 0;
-}
-
 .person {
   display: flex;
   gap: 24px;
