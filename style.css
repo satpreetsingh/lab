@@ -414,6 +414,24 @@ h2::after {
   height: auto;
 }
 
+/* a cropped clip has no edges of its own; frame it like a figure */
+.project-media.framed {
+  aspect-ratio: auto !important;
+  min-height: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.project-media.framed img {
+  position: static;
+  width: 100%;
+  height: auto;
+  border: 1px solid #c9ced6;
+  border-radius: 4px;
+}
+
 .media-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
