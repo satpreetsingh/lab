@@ -26,6 +26,18 @@
   <meta property="og:image:alt" content="Singh Lab: Natural and Engineered Intelligence, UNC Chapel Hill">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- these sections used to live on this page; keep old links working -->
+  <script>
+    (function () {
+      var moved = {
+        "#research": "research.html",
+        "#join": "people.html#join",
+        "#collaborators": "contact.html#collaborators"
+      };
+      if (moved[location.hash]) location.replace(moved[location.hash]);
+    })();
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="assets/banners.css">
 </head>
@@ -38,9 +50,10 @@
         <a class="site-name" href="./">Singh Lab</a>
 
         <ul>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#join">Join</a></li>
-          <li><a href="#collaborators">Collaborate</a></li>
+          <li><a href="./" aria-current="page">About</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -73,6 +86,11 @@
           <strong>News:</strong> Satpreet (Sat) Singh joins the UNC School of Data and
           Information Sciences as an assistant professor in November 2026.
           <a href="https://sdis.unc.edu/sdss-recruits-fourth-cohort-of-faculty/">Read the announcement</a>
+        </p>
+
+        <p class="news">
+          <strong>Recruiting:</strong> we are looking for PhD students for Fall 2027.
+          <a href="people.html#join">How to join</a>
         </p>
 
         <div class="links">
@@ -128,149 +146,42 @@
       </div>
     </section>
 
-    <section id="research">
+    <section id="news" class="tint">
       <div class="container">
-        <h2>Research</h2>
+        <h2>News</h2>
 
-        <div class="research-grid">
+        <ul class="news-list">
+          <li><span class="date">Nov 2026</span> <span>Sat joins the UNC School of Data and Information Sciences as an assistant professor, and the Singh Lab opens.</span></li>
+          <li><span class="date">Oct 2026</span> <span>Paper on <a href="https://neurips.cc/virtual/2026/loc/sydney/poster/149082">when curriculum learning helps in RL</a> accepted at NeurIPS 2026, plus extended abstracts at the NeurIPS workshops on <a href="https://interpretability4discovery.github.io/">Interpretability for Discovery</a> and <a href="https://sites.google.com/view/devai-workshop-2026/">Developmental Perspectives on AI</a>.</span></li>
+          <li><span class="date">Sep 2026</span> <span>Guest lecture on deep RL and "virtual model organisms" in Harvard's <a href="https://www.math.harvard.edu/course/mathematics-242/">Math 242: Evolutionary Dynamics</a>.</span></li>
+          <li><span class="date">Aug 2026</span> <span>Two posters at CCN 2026: <a href="https://arxiv.org/abs/2510.03699">larval zebrafish hunting</a> (Proceedings of CCN 2026) and <a href="https://openreview.net/forum?id=aAfdfjJ4Bh">zebrafish collective behavior</a>.</span></li>
+          <li><span class="date">May 2026</span> <span>Talk on electric-fish communication and unsupervised machine translation at the Harvard/MIT <a href="https://kempnerinstitute.harvard.edu/events/workshop-invented-constructed-and-emergent-languages-in-multi-agent-ai-systems/">Workshop on Invented, Constructed, and Emergent Languages in Multi-Agent AI Systems</a>.</span></li>
+          <li><span class="date">May 2026</span> <span>Talk at the Kempner <a href="https://kempnerinstitute.harvard.edu/events/spring-into-science-2/">Spring into Science Symposium</a>: "Reverse-engineering natural intelligence in weakly electric fish: a virtual laboratory approach."</span></li>
+          <li><span class="date">Apr 2026</span> <span>Talk at the Janelia conference on <a href="https://www.janelia.org/you-janelia/conferences/simulated-bodies-whole-body-biomechanical-models-0">Simulated Bodies: Whole Body Biomechanical Models</a>.</span></li>
+          <li><span class="date">Mar 2026</span> <span><a href="https://arxiv.org/abs/2510.25943">InputDSA</a> <a href="https://www.youtube.com/live/KZMpTeVEmdc?si=Y8FDJBOkK4iSuPtZ&amp;t=3739">oral talk</a> at CoSyNe 2026, and the second <a href="https://neuro-agent-models.github.io/">Agent-Based Models in Neuroscience workshop</a>.</span></li>
+        </ul>
 
-          <div class="research-item">
-            <h3>Agents and simulation</h3>
-            <p>
-              Building embodied and multi-agent models to study behavior,
-              interaction, sensing, signaling, and adaptation.
-              <!-- Build virtual organisms and populations whose behavior can be manipulated, perturbed, and dissected. -->
-            </p>
-            <ul class="research-papers">
-              <li><a href="https://www.nature.com/articles/s42256-022-00599-w">Plume-tracking agents</a> · Nature Machine Intelligence, 2023</li>
-              <li><a href="https://arxiv.org/abs/2510.03699">Zebrafish hunting with deep RL</a> · CCN 2026</li>
-              <li><a href="https://openreview.net/forum?id=cE07Ac7UWx">Weakly electric fish agents</a> · RLDM 2025, spotlight; NeurIPS 2025 workshop</li>
-              <li><a href="https://openreview.net/forum?id=253mXeGo9Z">Deciphering animal communication with UMT</a> (Proposal) · NeurIPS 2025 workshop</li>
-            </ul>
-          </div>
-
-          <div class="research-item">
-            <h3>AI for Science &amp; Medicine</h3>
-            <p>
-              Learn predictive models from biological and biomedical data, especially when dynamics, interventions, and uncertainty matter.
-            </p>
-            <ul class="research-papers">
-              <li><a href="https://www.sciencedirect.com/science/article/pii/S0165027021001345">Naturalistic human brain-behavior analysis</a> · J. Neuro Methods, 2021; <a href="https://www.nature.com/articles/s41597-022-01280-y">AJILE12 dataset</a> · Scientific Data, 2022</li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/39119021/">Uncertainty-aware arrhythmia detection</a> · Heart Rhythm O2, 2024</li>
-              <li><a href="https://aclanthology.org/2024.nlp4science-1.8/">Auditable LLMs for clinical interviews</a> · EMNLP 2024 workshop</li>
-            </ul>
-          </div>
-
-          <div class="research-item">
-            <h3>Neural computation</h3>
-            <p>
-              <!-- Understanding learned and biological computation through dynamical systems and interpretable models. -->
-              Understand what recurrent networks and biological circuits compute, how they implement it dynamically, and why different solutions emerge.
-            </p>
-            <ul class="research-papers">
-              <li><a href="https://arxiv.org/abs/2410.03972">Solution degeneracy in RNNs</a> · NeurIPS 2025, spotlight</li>
-              <li><a href="https://arxiv.org/abs/2510.25943">InputDSA: input vs. recurrent dynamics</a> · ICLR 2026</li>
-              <li><a href="https://openreview.net/forum?id=SbbpTtB6B4">Geometry of neural dynamics in RL controllers</a> · RLC 2024 workshop</li>
-            </ul>
-          </div>
-
-        </div>
+        <details class="news-older">
+          <summary>Earlier news</summary>
+          <ul class="news-list">
+            <li><span class="date">Jan 2026</span> <span><a href="https://arxiv.org/abs/2510.25943">InputDSA</a> accepted at <a href="https://openreview.net/forum?id=2FrAvRz1E7">ICLR 2026</a>.</span></li>
+            <li><span class="date">Dec 2025</span> <span><a href="https://openreview.net/forum?id=cE07Ac7UWx">Electric fish MARL agents</a> accepted as a CoSyNe 2026 poster, and a Harvard Center for Brain Science <a href="https://cbs.fas.harvard.edu/calendar_event/neurolunch-satpreet-singh-rajan-lab/">Neurolunch talk</a>.</span></li>
+            <li><span class="date">Nov 2025</span> <span>Workshop on agent-based models in neuroscience accepted at CoSyNe 2026, co-organized with Aran Nayebi (CMU) and Elliott Abe (UW).</span></li>
+            <li><span class="date">Oct 2025</span> <span>Three abstracts at the NeurIPS 2025 Workshop on AI for Non-Human Animal Communication: <a href="https://openreview.net/forum?id=cE07Ac7UWx">MARL for weakly electric fish</a>, <a href="https://openreview.net/forum?id=253mXeGo9Z">unsupervised machine translation with MARL</a>, and <a href="https://openreview.net/forum?id=RelIvm178s">source separation</a>.</span></li>
+            <li><span class="date">Sep 2025</span> <span><a href="https://arxiv.org/abs/2410.03972">Solution degeneracy in task-trained RNNs</a> is a NeurIPS 2025 spotlight; <a href="https://arxiv.org/abs/2510.03699">zebrafish hunting agents</a> is a NeurIPS 2025 AI4Science workshop spotlight.</span></li>
+            <li><span class="date">Jun 2025</span> <span><a href="https://rldm.org/program-2025/">RLDM 2025 spotlight talk</a> on multi-agent RL for weakly electric fish collectives.</span></li>
+            <li><span class="date">May 2025</span> <span>"Pizza talk" at Harvard Medical School on multi-agent electrosensing collectives.</span></li>
+            <li><span class="date">Apr 2025</span> <span>Organized the first <a href="https://neuro-agent-models.github.io">Agent-Based Models in Neuroscience workshop</a> at CoSyNe 2025, and spoke on <a href="https://www.nature.com/articles/s42256-022-00599-w">plume-tracking agents</a> at the CoSyNe workshop on Collectively Emerged Timescales.</span></li>
+            <li><span class="date">Mar 2025</span> <span>Awarded the Alice and Joseph Brooks Fund Postdoctoral Fellowship (2025–26) at Harvard Medical School.</span></li>
+            <li><span class="date">May 2024</span> <span>Speaker at the WUSTL NEXTEN conference: Envisaging Theoretical and Computational Neuroscience for the Next 10 Years.</span></li>
+            <li><span class="date">Apr 2024</span> <span>Talk on <a href="https://www.nature.com/articles/s42256-022-00599-w">deep RL agents for insect plume tracking</a> at the <a href="https://www.rlandthebrain.com/hms_seminar">Harvard Medical School RL Seminar</a>.</span></li>
+          </ul>
+        </details>
 
         <p class="research-more">
-          More papers, code, talks, and helpful links are on
-          <a href="https://satpreetsingh.github.io/research/">Satpreet (Sat) Singh's research page →</a>
+          Blog posts and older news are on
+          <a href="https://satpreetsingh.github.io/">Satpreet (Sat) Singh's homepage →</a>
         </p>
-
-        <img
-          class="lab-divider section-divider"
-          src="assets/gabor-divider.svg"
-          alt=""
-          style="--focus:50%"
-        >
-      </div>
-    </section>
-
-    <section id="join">
-      <div class="container">
-        <h2>Join us</h2>
-
-        <div class="about-text">
-          <p>
-            We are building a new interdisciplinary research group at UNC-Chapel Hill
-            and are recruiting <strong>PhD students for Fall 2027</strong>.
-          </p>
-
-          <p>
-            Students can join the lab through the
-            <a href="https://sdis.unc.edu/academics/">SDIS degree programs</a>,
-            such as the
-            <a href="https://sdis.unc.edu/academics/doctoral/phd-data-science/">PhD in Data Science</a>
-            (<a href="https://sdis.unc.edu/academics/graduate-admissions/">apply by Dec. 15, 2026</a>;
-            Dec. 1 for early funding consideration).
-            Joining through other graduate programs on campus may also be
-            possible; details to come.
-          </p>
-
-          <p>
-            We welcome backgrounds in ML, data science, physics, applied math,
-            CS/engineering, neuroscience, or biology. Strong quantitative skills
-            matter more than prior neuroscience or biology experience. Other or
-            unusual backgrounds are welcome too, especially with relevant
-            real-world experience and strong quantitative skills.
-          </p>
-
-          <p>
-            Interested?
-            <a href="mailto:satpreetsingh@gmail.com?subject=Prospective%20student%20-%20Singh%20Lab">Send an email</a>
-            with your CV and a few lines about your interests. (Please note that there will be a delay in my responses as I transition/move to Chapel-Hill over the next few weeks.)
-          </p>
-        </div>
-
-        <img
-          class="lab-divider section-divider"
-          src="assets/weights-divider.svg"
-          alt=""
-          style="--focus:50%"
-        >
-      </div>
-    </section>
-
-    <section id="collaborators">
-      <div class="container">
-        <h2>Collaborators</h2>
-
-        <div class="about-text">
-          <p>
-            Our work has always involved close collaboration across disciplines.
-          </p>
-
-          <p>
-            <strong>Experimental and clinical partners:</strong> we are
-            especially interested in groups with rich time-series data, or with
-            systems where perturbation experiments are possible, who want models
-            that make testable predictions rather than just fit data, and where
-            a simulation- or dynamics-based model could sharpen their questions.
-          </p>
-
-          <p>
-            <strong>Theory and methods partners:</strong> we are equally keen to
-            work with mathematicians, physicists, statisticians, computer
-            scientists and others with complementary toolkits on open questions
-            in artificial and natural intelligence.
-          </p>
-
-          <p>
-            If either sounds like you, please
-            <a href="mailto:satpreetsingh@gmail.com?subject=Collaboration%20-%20Singh%20Lab">reach out</a>.
-          </p>
-        </div>
-
-        <img
-          class="lab-divider section-divider"
-          src="assets/ecg-divider.svg"
-          alt=""
-          style="--focus:50%"
-        >
       </div>
     </section>
 

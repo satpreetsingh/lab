@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research · Singh Lab · UNC Chapel Hill</title>
+
+  <meta
+    name="description"
+    content="Research in the Singh Lab: agent-based models and simulation, AI for science and medicine, and the dynamics of neural computation."
+  >
+
+  <link rel="canonical" href="https://satsinghlab.com/research.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Singh Lab">
+  <meta property="og:title" content="Research · Singh Lab · UNC Chapel Hill">
+  <meta property="og:description" content="Research in the Singh Lab: agent-based models and simulation, AI for science and medicine, and the dynamics of neural computation.">
+  <meta property="og:url" content="https://satsinghlab.com/research.html">
+  <meta property="og:image" content="https://satsinghlab.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Singh Lab: Natural and Engineered Intelligence, UNC Chapel Hill">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/banners.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="site-name" href="./">Singh Lab</a>
+
+        <ul>
+          <li><a href="./">About</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="research.html" aria-current="page">Research</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="research">
+      <div class="container">
+        <h2>Research</h2>
+
+        <div class="about-text">
+          <p>
+            We build and analyze agent-based models, such as recurrent neural
+            network controllers trained with deep reinforcement learning, to study
+            natural behavior and the neural dynamics that generate it. Like digital
+            twins, these models allow rapid hypothesis testing in silico while
+            staying fully observable. We also develop theory and methods to
+            interpret and compare such networks, and apply the broader machine
+            learning and simulation toolbox to problems in biology and medicine.
+          </p>
+        </div>
+
+        <ul class="theme-nav">
+          <li><a href="#agents">Agents and simulation</a></li>
+          <li><a href="#computation">Neural computation</a></li>
+          <li><a href="#science">AI for Science &amp; Medicine</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="agents" class="tint">
+      <div class="container">
+        <h2>Agents and simulation</h2>
+        <p class="section-lede">
+          Building embodied and multi-agent models to study behavior,
+          interaction, sensing, signaling, and adaptation.
+        </p>
+
+        <div class="project-grid">
+
+          <article class="project wide">
+            <div class="project-media">
+              <img src="https://satpreetsingh.github.io/files/MAFish_20250109_183556_58206857_5sec.gif" alt="Simulated weakly electric fish agents foraging together, with their electric fields drawn around them" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Weakly electric fish collectives</h3>
+              <p>
+                Multi-agent RL agents that sense their surroundings and signal to
+                each other with self-generated electric fields, modeled on weakly
+                electric fish. A 3D biomechanical body model is in progress.
+              </p>
+              <div class="media-strip">
+                <img src="https://satpreetsingh.github.io/files/wef3d_swim_forward_side_cropped.gif" alt="3D fish model swimming forward" loading="lazy">
+                <img src="https://satpreetsingh.github.io/files/wef3d_turns_learned_cropped.gif" alt="3D fish model performing learned turns" loading="lazy">
+                <img src="https://satpreetsingh.github.io/files/wef3d_nose_yaw_demo_sensors_cropped.gif" alt="3D fish model with electrosensors on its body" loading="lazy">
+              </div>
+              <p class="project-venue">RLDM 2025, spotlight talk · NeurIPS 2025 workshop</p>
+              <p class="project-links">
+                <a href="https://openreview.net/forum?id=cE07Ac7UWx">Paper</a>
+                <a href="https://openreview.net/forum?id=FX7YtfEYj8">Active sensing policies (RLC 2024)</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="https://satpreetsingh.github.io/files/zf1_cropped.gif" alt="Simulated larval zebrafish agent hunting prey" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Larval zebrafish hunting</h3>
+              <p>
+                Deep RL agents with recurrent networks, trained to hunt prey, are
+                used to dissect the hunting behavior of larval zebrafish.
+              </p>
+              <p class="project-venue">CCN 2026 · NeurIPS 2025 AI4Science workshop, spotlight</p>
+              <p class="project-links">
+                <a href="https://arxiv.org/abs/2510.03699">Preprint</a>
+                <a href="https://openreview.net/forum?id=3kiCmoOQz7">Workshop paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="https://satpreetsingh.github.io/files/zf4_cropped.gif" alt="Group of simulated zebrafish agents foraging, with their visual fields drawn" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Zebrafish collective behavior</h3>
+              <p>
+                How collision avoidance and the distribution of food shape
+                collective foraging in groups of fish agents.
+              </p>
+              <p class="project-venue">CCN 2026</p>
+              <p class="project-links">
+                <a href="https://openreview.net/forum?id=aAfdfjJ4Bh">Abstract</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project wide">
+            <div class="project-media">
+              <img src="https://raw.githubusercontent.com/BruntonUWBio/plumetracknets/refs/heads/main/supp/3307e9/noisy3x5b5_HOME_merged_common_ep159.gif" alt="Agent tracking a turbulent odor plume, alongside its neural activity in three dimensions" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Turbulent plume tracking</h3>
+              <p>
+                Insect-like agents trained with deep RL to track turbulent odor
+                plumes. Their behavior resembles that of flying insects, and their
+                recurrent networks learn to compute task-relevant variables with
+                distinct structure in population activity.
+              </p>
+              <p>
+                <strong>Multi-level mechanistic interpretability, before it had a
+                name:</strong> the agents were analyzed at the levels of behavior,
+                computation, and neural dynamics together, the way a
+                neuroscientist would study an animal
+                (<a href="https://arxiv.org/abs/2109.12434">preprint, 2021</a>).
+                The work is now a canonical NeuroAI example in the
+                <a href="https://www.youtube.com/watch?v=EN89LVVnLbs">Neuromatch NeuroAI course</a>.
+              </p>
+              <p class="project-venue">Nature Machine Intelligence, 2023 · cover feature</p>
+              <p class="project-links">
+                <a href="https://www.nature.com/articles/s42256-022-00599-w">Paper</a>
+                <a href="https://arxiv.org/abs/2109.12434">Preprint</a>
+                <a href="https://github.com/BruntonUWBio/plumetracknets">Code &amp; animations</a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="research-also">
+          Also: <a href="https://openreview.net/pdf?id=5Q-sYQ9tD5j">Neuroprospecting with deep RL agents</a>,
+          an essay on what AI and neuroscience can learn from each other · NeurIPS 2021 workshop
+        </p>
+      </div>
+    </section>
+
+    <section id="computation">
+      <div class="container">
+        <h2>Neural computation</h2>
+        <p class="section-lede">
+          Understand what recurrent networks and biological circuits compute, how
+          they implement it dynamically, and why different solutions emerge.
+        </p>
+
+        <div class="project-grid">
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/research/solution-degeneracy.png" alt="Schematic: task complexity, learning regime, network size, and structural regularization control behavioral, dynamical, and weight degeneracy" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Solution degeneracy in RNNs</h3>
+              <p>
+                Measuring and controlling how differently task-trained recurrent
+                networks solve the same task.
+              </p>
+              <p class="project-venue">NeurIPS 2025, spotlight</p>
+              <p class="project-links">
+                <a href="https://arxiv.org/abs/2410.03972">Paper</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/research/inputdsa.png" alt="InputDSA method: data from two brain-world systems are embedded, fit with input-driven state-space models, and compared on state and input similarity" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>InputDSA</h3>
+              <p>
+                Demixing recurrent from input-driven dynamics, so that neural
+                systems can be compared on each separately.
+              </p>
+              <p class="project-venue">ICLR 2026 · CoSyNe 2026, oral</p>
+              <p class="project-links">
+                <a href="https://arxiv.org/abs/2510.25943">Paper</a>
+                <a href="https://www.youtube.com/live/KZMpTeVEmdc?si=Y8FDJBOkK4iSuPtZ&amp;t=3739">Talk</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/research/curriculum-learning.png" alt="Schematic of the policy-learning model: sources of randomness, dense versus sparse rewards, and curriculum control knobs" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>When curriculum learning helps</h3>
+              <p>
+                The benefit of curricula in reinforcement learning depends on reward
+                sparsity and on competing optima.
+              </p>
+              <p class="project-venue">NeurIPS 2026</p>
+              <p class="project-links">
+                <a href="https://neurips.cc/virtual/2026/loc/sydney/poster/149082">Poster</a>
+                <a href="https://openreview.net/forum?id=t11t6OT9PS">OpenReview</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/research/neural-geometry.png" alt="Recurrent network activity in its top two principal components at six points in training, pruning into a ring as fixed points emerge" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Geometry of neural dynamics in RL controllers</h3>
+              <p>
+                As an RL controller learns to balance a pendulum, training prunes
+                its recurrent dynamics into a ring that encodes the pendulum's
+                angle, and stable and unstable fixed points emerge in turn.
+              </p>
+              <p class="project-venue">RLC 2024 workshop, talk</p>
+              <p class="project-links">
+                <a href="https://openreview.net/forum?id=SbbpTtB6B4">Paper</a>
+                <a href="https://www.talkrl.com/episodes/rlc-2024-posters-and-hallways-1">TalkRL podcast</a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="science" class="tint">
+      <div class="container">
+        <h2>AI for Science &amp; Medicine</h2>
+        <p class="section-lede">
+          Learn predictive models from biological and biomedical data, especially
+          when dynamics, interventions, and uncertainty matter.
+        </p>
+
+        <div class="project-grid">
+
+          <article class="project wide stacked">
+            <div class="project-media">
+              <img src="https://raw.githubusercontent.com/BruntonUWBio/mining2021/master/right_only_1x4_boomerang.gif" alt="Pose tracking of a patient's wrist movements in long-term hospital video, from the J. Neuroscience Methods paper" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Naturalistic human brain and behavior</h3>
+              <p>
+                Most studies of human movement use short, scripted lab tasks. We
+                instead mined weeks of continuous intracranial recordings and video
+                from hospitalized patients for natural, unscripted movements,
+                using pose tracking to find and annotate thousands of arm movements
+                automatically (the clip above, from the
+                <a href="https://www.sciencedirect.com/science/article/pii/S0165027021001345">J. Neuroscience Methods paper</a>).
+              </p>
+              <ul class="project-list">
+                <li>
+                  <a href="https://www.eneuro.org/content/early/2021/05/21/ENEURO.0007-21.2021.abstract">Behavioral and neural variability of naturalistic arm movements</a>:
+                  movement and neural activity vary far more in natural settings
+                  than in the lab · eNeuro, 2021, joint first author
+                </li>
+                <li>
+                  <a href="https://www.nature.com/articles/s41597-022-01280-y">AJILE12</a>:
+                  the released dataset of long-term intracranial recordings with
+                  pose estimates, now used in the
+                  <a href="https://compneuro.neuromatch.io/projects/ECoG/README.html">Neuromatch computational neuroscience course</a>
+                  · Scientific Data, 2022
+                </li>
+                <li>
+                  Follow-on work: <a href="https://iopscience.iop.org/article/10.1088/1741-2552/abda0b/meta">neural decoders that transfer across participants</a>
+                  · J. Neural Engineering, 2021
+                </li>
+              </ul>
+              <p class="project-venue">J. Neuroscience Methods, 2021 · eNeuro, 2021 · Scientific Data, 2022</p>
+              <p class="project-links">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0165027021001345">Paper</a>
+                <a href="https://arxiv.org/abs/2001.08349">Preprint</a>
+                <a href="https://github.com/BruntonUWBio/mining2021">Code, data &amp; videos</a>
+                <a href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/projects/ECoG/exploreAJILE12.ipynb">AJILE12 Colab notebook</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/research/arrhythmia-detection.jpg" alt="Model development pipeline: ECG data, neural network classifier, explainability analysis, and error categorization by doctors" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Uncertainty-aware arrhythmia detection</h3>
+              <p>
+                Multimodal deep learning with ensemble-based uncertainty to detect
+                junctional ectopic tachycardia in pediatric cardiac ICU patients.
+              </p>
+              <p class="project-venue">Heart Rhythm O2, 2024</p>
+              <p class="project-links">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/39119021/">PubMed</a>
+              </p>
+              <p class="project-credit">Figure: Ju et al., Heart Rhythm O2 (2024), <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/research/racer.png" alt="RACER pipeline: retrieve, aggregate, cluster with expert guidance, and re-cluster interview responses using an LLM" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Auditable LLMs for clinical interviews</h3>
+              <p>
+                RACER: an LLM-powered method for scalable, auditable analysis of
+                semi-structured mental health interviews.
+              </p>
+              <p class="project-venue">EMNLP 2024 NLP4Science workshop</p>
+              <p class="project-links">
+                <a href="https://aclanthology.org/2024.nlp4science-1.8/">Paper</a>
+              </p>
+            </div>
+          </article>
+
+
+          <article class="project">
+            <div class="project-media">
+              <img src="https://satpreetsingh.github.io/files/umt.png" alt="Translators f and g map between synthetic electric signals from multi-agent RL and real fish recordings, constrained by cycle consistency and priors" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Translating electric-fish communication</h3>
+              <p>
+                A proposal to decipher electric-fish signals with unsupervised
+                machine translation between signals from multi-agent RL agents and
+                recordings of real fish, constrained by cycle consistency.
+              </p>
+              <p class="project-venue">NeurIPS 2025 AI for Animal Communication workshop</p>
+              <p class="project-links">
+                <a href="https://openreview.net/forum?id=253mXeGo9Z">Proposal</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="https://satpreetsingh.github.io/files/pikachu.png" alt="Physics-based source separation: fish positions are optimized so simulated electrode readings match recordings, then signals are assigned to individual fish" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>Who said that? Source separation for electric fish</h3>
+              <p>
+                Using a physics model of the electric field to find where each fish
+                is and which fish produced each signal, so that pose annotations
+                and signal attribution can be automated.
+              </p>
+              <p class="project-venue">NeurIPS 2025 AI for Animal Communication workshop</p>
+              <p class="project-links">
+                <a href="https://openreview.net/forum?id=RelIvm178s">Paper</a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="research-also">
+          Also: <a href="https://direct.mit.edu/isal/proceedings/isal/35/89/116839">binding affinity and gene regulatory network evolution</a> · ALIFE 2023
+        </p>
+
+        <p class="research-more">
+          More papers, code, talks, and helpful links are on
+          <a href="https://satpreetsingh.github.io/research/">Satpreet (Sat) Singh's research page →</a>
+          and <a href="https://scholar.google.com/citations?user=S6wyhngAAAAJ&amp;hl=en">Google Scholar</a>.
+        </p>
+
+        <img
+          class="lab-divider section-divider"
+          src="assets/gabor-divider.svg"
+          alt=""
+          style="--focus:50%"
+        >
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Singh Lab · University of North Carolina at Chapel Hill
+    </div>
+  </footer>
+
+  <!-- Default Statcounter code for www.satsinghlab.com
+  http://www.satsinghlab.com -->
+  <script type="text/javascript">
+  var sc_project=13357167;
+  var sc_invisible=1;
+  var sc_security="1e96510b";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/13357167/0/1e96510b/1/"
+  alt="Web Analytics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+
+</body>
+</html>
