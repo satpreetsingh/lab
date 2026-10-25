@@ -651,23 +651,17 @@ h2::after {
 .reading-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 8px;
+  margin: 0;
 }
 
 .reading-list li {
-  padding: 8px 0;
+  padding: 6px 0;
   border-top: 1px solid var(--border);
-}
-
-.reading-list .ref,
-.reading-list .why {
-  display: block;
-  font-size: 0.92rem;
-  line-height: 1.5;
 }
 
 .reading-list .ref {
   color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .contact-list {
