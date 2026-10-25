@@ -92,17 +92,21 @@ nav ul a:hover {
   margin-right: auto;
 }
 
-.nav-join {
-  padding: 4px 14px;
-  border-radius: 999px;
-  background: var(--link);
-  color: #fff;
-  font-weight: 600;
+/* Join and Collaborate sit outside the link list so phones can keep them on
+   the first row, but they read as more nav links */
+.nav-extra {
+  display: flex;
+  gap: 24px;
+  margin-left: -6px;
 }
 
-.nav-join:hover {
-  background: #22598a;
-  color: #fff;
+.nav-extra a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-extra a:hover {
+  color: var(--text);
 }
 
 nav ul a[aria-current="page"] {
@@ -178,49 +182,6 @@ main > section:first-child,
 
 .tint {
   background: var(--tint);
-}
-
-.recruit {
-  max-width: 760px;
-  margin: 4px 0 16px;
-  padding: 14px 18px;
-  background: #fdf3e4;
-  border: 1px solid #f1d6a8;
-  border-left: 4px solid var(--amber);
-  border-radius: 0 8px 8px 0;
-}
-
-.recruit p {
-  margin: 0 0 10px;
-  font-size: 1rem;
-  color: var(--text);
-}
-
-.hero .recruit p {
-  font-size: 1rem;
-  color: var(--text);
-  margin: 0 0 10px;
-}
-
-.recruit .recruit-title,
-.hero .recruit .recruit-title {
-  margin: 0 0 4px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #8a5509;
-}
-
-.button.button-primary {
-  background: var(--link);
-  border-color: var(--link);
-  color: #fff;
-  font-weight: 600;
-}
-
-.button.button-primary:hover {
-  background: #22598a;
-  border-color: #22598a;
-  color: #fff;
 }
 
 .hero .news strong {
@@ -760,8 +721,10 @@ footer {
   }
 
   /* phones: lab name and Join on the first row, page links below */
-  .nav-join {
+  .nav-extra {
     order: 1;
+    gap: 14px;
+    font-size: 0.95rem;
   }
 
   nav ul {
