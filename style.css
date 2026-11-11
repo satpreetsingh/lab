@@ -562,8 +562,75 @@ h2::after {
 }
 
 #join h3 {
-  margin: 16px 0 4px;
+  margin: 16px 0 6px;
   font-size: 1.1rem;
+}
+
+/* the interest-form call to action: a boxed button with the details beside it */
+.join-cta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin: 14px 0 22px;
+  padding: 16px 18px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.join-cta p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.join-button {
+  flex: none;
+  font-weight: 600;
+  background: var(--background);
+}
+
+/* the three ways to join, as cards side by side */
+.join-paths {
+  display: grid;
+  grid-template-columns: 1.25fr 1.1fr 0.85fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.join-path {
+  padding: 4px 16px 12px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+#join .join-path h3 {
+  margin: 10px 0 6px;
+  font-size: 1.02rem;
+}
+
+.join-path ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+}
+
+.join-path li + li {
+  margin-top: 5px;
+}
+
+@media (max-width: 860px) {
+  .join-paths {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .join-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .notes-list {
@@ -809,4 +876,19 @@ footer {
     grid-template-columns: 1fr;
     gap: 0;
   }
+}
+/* campus photo at the top of the Join section */
+.join-photo {
+  margin: 0 0 20px;
+}
+
+.join-photo img {
+  border-radius: 6px;
+  --focus: 50%;
+}
+
+.join-photo figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.8rem;
 }
