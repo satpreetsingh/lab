@@ -130,6 +130,7 @@ nav ul a[aria-current="page"] {
   letter-spacing: -0.035em;
   margin: 0 0 12px;
   max-width: 800px;
+  text-wrap: balance;
 }
 
 .hero p {
@@ -590,10 +591,10 @@ h2::after {
   background: var(--background);
 }
 
-/* the three ways to join, as cards side by side */
+/* the two ways to join, as cards side by side */
 .join-paths {
   display: grid;
-  grid-template-columns: 1.25fr 1.1fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-bottom: 18px;
 }
