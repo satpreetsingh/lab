@@ -155,6 +155,10 @@ nav ul a[aria-current="page"] {
   text-wrap: balance;
 }
 
+.hero h1 .ini {
+  color: var(--link);
+}
+
 .hero p {
   font-size: 1.35rem;
   color: var(--muted);
